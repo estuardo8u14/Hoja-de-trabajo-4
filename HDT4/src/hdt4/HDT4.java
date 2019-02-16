@@ -19,9 +19,10 @@ public class HDT4
         String tipo = scan.next();
         tipo = tipo.toUpperCase();
         
+        iCalculadora calculadora = Calculadora.Instance();
         StackFactory factory = new StackFactory();
         iStack pila = factory.getStack(tipo);
-        iCalculadora calculadora = Calculadora.Instance();
+        
         ArrayList<String> array = new ArrayList<>();
         
         Scanner read = new Scanner(new File("datos.txt"));

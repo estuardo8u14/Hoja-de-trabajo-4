@@ -13,7 +13,7 @@ public class StackVector<E> implements iStack<E>
      * Constructor
      */
     public StackVector() {
-        this.vector = new Vector<E>();
+        this.vector = new Vector<>();
         System.out.println("Vector");
     }
     

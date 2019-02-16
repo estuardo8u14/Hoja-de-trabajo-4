@@ -1,72 +1,84 @@
 
 package hdt4;
 
-import java.util.LinkedList;
-import java.util.List;;
-
-
 public class LinkdList<E> implements iLista<E> 
 {
     
-    private List<E> list;
+    protected int count; // list size
+    protected Node<E> head; // ref. to first element
 
-    /**
-     * Constructor
-     */
-    public LinkdList() {
-        this.list = new LinkedList<>();
+    public LinkdList()
+    // post: generates an empty list
+    {
+        head = null;
+        count = 0;
     }
     
-    /**
-     * @param value = valor a ser agregado
-     */
     @Override
     public void add(E value)
+    // post: adds value to end of list
     {
-        
+        // location for new value
+        Node<E> temp = new Node<>(value,null);
+        if (head != null)
+        {
+            // pointer to possible tail
+            Node<E> finger = head;
+        while (finger.next() != null)
+        {
+            finger = finger.next();
+        }
+		 
+        finger.setNext(temp);
+        } else head = temp;
+	  
+            count++;  
     }
-   // post: value is added to tail of list
     
-    /**
-     * @return valor removido de la ultima posicion
-     */
     @Override
     public E remove()
+    // pre: list is not empty
+    // post: removes and returns value from beginning of list
     {
-        return null;
+        Node<E> finger = head;
+        Node<E> previous = null;
+        
+        while(finger.next() != null)
+        {
+            previous = finger;
+            finger = finger.next();
+        }
+        
+        if(previous == null)
+        {
+            head = null;
+        }
+        else
+        {
+            previous.setNext(null);
+        }
+        count--;
+        return finger.value();
     }
-   // pre: list has at least one element
-   // post: removes last value found in list
-   
-    /**
-     * @return ultimo elemento de la lista
-     */
+    
     @Override
     public E get()
+    // pre: list is not empty
+    // post: returns first value in list
     {
-        return null;
+        return head.value();
     }
-   // pre: list has at least one element
-   // post: returns last value found in list
-
-    /**
-     * @return true o false, vacia o no
-     */
-    @Override
-   public boolean isEmpty()
-   {
-       return true;
-   }
-   // post: returns true iff list has no elements
    
-    /**
-     * @return tamaño de la lista
-     */
     @Override
-   public int size()
-   {
-       return 0;
-   }
-   // post: returns number of elements in list
-    
+    public int size()
+    // post: returns number of elements in list
+    {
+        return count;
+    }
+
+    @Override
+    public boolean isEmpty() 
+    {
+        return size() == 0;
+    }   
 }

@@ -6,7 +6,6 @@
 package hdt4;
 
 /**
- *
  * @author Gerardo
  * @param <E>
  */

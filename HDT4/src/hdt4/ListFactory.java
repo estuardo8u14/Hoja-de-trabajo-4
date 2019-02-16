@@ -13,10 +13,6 @@ public class ListFactory
         {
             return new LinkdList();
         }
-        /*else if(tipo.equals("ARRAYLIST"))
-        {
-            return new StackArrayList();
-        }*/
         return null;
     }
     

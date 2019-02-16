@@ -12,6 +12,21 @@ package hdt4;
  */
 public class Calculadora implements iCalculadora
 {
+    public static boolean instanciado = false;
+    
+    public static Calculadora Instance()
+    {
+        if(! instanciado)
+        {
+            instanciado = true;
+            return new Calculadora();
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
     /* (non-Javadoc)
      * @see iCalculadora#sumar(double, double)
      */

@@ -21,7 +21,7 @@ public class HDT4
         
         StackFactory factory = new StackFactory();
         iStack pila = factory.getStack(tipo);
-        iCalculadora calculadora = new Calculadora();
+        iCalculadora calculadora = Calculadora.Instance();
         ArrayList<String> array = new ArrayList<>();
         
         Scanner read = new Scanner(new File("datos.txt"));

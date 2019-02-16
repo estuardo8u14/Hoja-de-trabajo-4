@@ -15,7 +15,7 @@ public class LinkdList<E> implements iLista<E>
     }
     
     @Override
-    public void add(E value)
+    public void push(E value)
     // post: adds value to end of list
     {
         // location for new value
@@ -36,7 +36,7 @@ public class LinkdList<E> implements iLista<E>
     }
     
     @Override
-    public E remove()
+    public E pop()
     // pre: list is not empty
     // post: removes and returns value from beginning of list
     {
@@ -62,7 +62,7 @@ public class LinkdList<E> implements iLista<E>
     }
     
     @Override
-    public E get()
+    public E peek()
     // pre: list is not empty
     // post: returns first value in list
     {
@@ -77,7 +77,7 @@ public class LinkdList<E> implements iLista<E>
     }
 
     @Override
-    public boolean isEmpty() 
+    public boolean empty() 
     {
         return size() == 0;
     }   

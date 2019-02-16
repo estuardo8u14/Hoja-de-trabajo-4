@@ -11,18 +11,18 @@ package hdt4;
  */
 public interface iLista<E> 
 {
-    public void add(E value);
+    public void push(E value);
    // post: value is added to tail of list
     
-    public E remove();
+    public E pop();
    // pre: list has at least one element
    // post: removes last value found in list
    
-    public E get();
+    public E peek();
    // pre: list has at least one element
    // post: returns last value found in list
 
-   public boolean isEmpty();
+   public boolean empty();
    // post: returns true iff list has no elements
    
    public int size();

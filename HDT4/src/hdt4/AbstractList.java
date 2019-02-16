@@ -17,19 +17,19 @@ public abstract class AbstractList<E> implements iLista<E>
     }
     
     @Override
-    abstract public void add(E value);
+    abstract public void push(E value);
 
     @Override
-    abstract public E remove();
+    abstract public E pop();
 
     @Override
-    abstract public E get();
+    abstract public E peek();
     
     @Override
     abstract public int size();
 
     @Override
-    public boolean isEmpty() 
+    public boolean empty() 
     {
         return size() == 0;
     }

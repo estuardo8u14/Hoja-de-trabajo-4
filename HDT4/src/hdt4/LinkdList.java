@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;;
 
 
-public class LinkdList<E> implements iStack<E> 
+public class LinkdList<E> implements iLista<E> 
 {
     
     private List<E> list;
@@ -17,55 +17,56 @@ public class LinkdList<E> implements iStack<E>
         this.list = new LinkedList<>();
     }
     
-    /*
-     * @see iPila push(java.lang.Object)
+    /**
+     * @param value = valor a ser agregado
      */
     @Override
-    public void push(E item) 
+    public void add(E value)
     {
-        list.add(item);
+        
     }
+   // post: value is added to tail of list
+    
+    /**
+     * @return valor removido de la ultima posicion
+     */
+    @Override
+    public E remove()
+    {
+        return null;
+    }
+   // pre: list has at least one element
+   // post: removes last value found in list
+   
+    /**
+     * @return ultimo elemento de la lista
+     */
+    @Override
+    public E get()
+    {
+        return null;
+    }
+   // pre: list has at least one element
+   // post: returns last value found in list
 
-    /*
-     * @see iPila pop()
+    /**
+     * @return true o false, vacia o no
      */
     @Override
-    public E pop() 
-    {
-        E res;
-        res = list.remove(size()-1);
-        return res;
-    }
-
-    /* 
-     * @see iPila peek()
+   public boolean isEmpty()
+   {
+       return true;
+   }
+   // post: returns true iff list has no elements
+   
+    /**
+     * @return tamaño de la lista
      */
     @Override
-    public E peek() 
-    {
-        E peek;
-        peek = list.get(size()-1);
-        return peek;
-    }
-
-    /* (non-Javadoc)
-     * @see iPila#empty()
-     */
-    @Override
-    public boolean empty() 
-    {
-        return list.isEmpty();
-    }
-
-    /* (non-Javadoc)
-     * @see iPila#size()
-     */
-    @Override
-    public int size() 
-    {
-        int size;
-        size = list.size();
-        return size;
-    }
+   public int size()
+   {
+       return 0;
+   }
+   // post: returns number of elements in list
     
 }

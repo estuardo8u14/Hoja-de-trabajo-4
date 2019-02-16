@@ -22,6 +22,10 @@ public class StackFactory
         {
             return new StackArrayList();
         }
+        else if(tipo.equals("LINKEDLIST"))
+        {
+            return new LinkdList();
+        }
         return null;
     }
 }

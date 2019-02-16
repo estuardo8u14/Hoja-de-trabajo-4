@@ -20,10 +20,10 @@ public class HDT4
         tipo = tipo.toUpperCase();
         
         iCalculadora calculadora = Calculadora.Instance();
-        //StackFactory stackFactory = new StackFactory();
-        ListFactory listFactory = new ListFactory();
-        //iStack pila = stackFactory.getStack(tipo);
-        iLista pila = listFactory.getStack(tipo);
+        StackFactory stackFactory = new StackFactory();
+        //ListFactory listFactory = new ListFactory();
+        iStack pila = stackFactory.getStack(tipo);
+        //iLista pila = listFactory.getStack(tipo);
         
         ArrayList<String> array = new ArrayList<>();
         

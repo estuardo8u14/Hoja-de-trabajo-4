@@ -13,6 +13,14 @@ public class ListFactory
         {
             return new LinkdList();
         }
+        else if(tipo.equals("DOUBLELINKEDLIST"))
+        {
+            return null;
+        }
+        else if(tipo.equals("CIRCULARLIST"))
+        {
+            return null;
+        }
         return null;
     }
     

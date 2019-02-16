@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hdt4;
 
 /**
@@ -12,20 +8,20 @@ package hdt4;
 public interface iLista<E> 
 {
     public void push(E value);
-   // post: value is added to tail of list
+   // post: valor agregado al final de la lista
     
     public E pop();
-   // pre: list has at least one element
-   // post: removes last value found in list
+   // pre: la lista tiene por lo menos un elemento 
+   // post: elimina el ultimo elemento de la lista y lo devuelve 
    
     public E peek();
-   // pre: list has at least one element
-   // post: returns last value found in list
+   // pre: la lista tiene por lo menos un elemento 
+   // post: devuelve el ultimo elemento de la lista
 
    public boolean empty();
-   // post: returns true iff list has no elements
+   // post: true si la lista esta vacia, false si no
    
    public int size();
-   // post: returns number of elements in list
+   // post: devuelve el numero de elementos en la lista
 
 }

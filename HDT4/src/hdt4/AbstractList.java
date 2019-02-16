@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hdt4;
 
 /**
@@ -16,18 +12,33 @@ public abstract class AbstractList<E> implements iLista<E>
         
     }
     
+    /**
+     * @param value valor que se agregara a la lista
+     */
     @Override
     abstract public void push(E value);
 
+    /**
+     * @return ultimo valor de la lista
+     */
     @Override
     abstract public E pop();
 
+    /**
+     * @return ultimo valor de la lista
+     */
     @Override
     abstract public E peek();
     
+    /**
+     * @return tamaño de la lista
+     */
     @Override
     abstract public int size();
 
+    /**
+     * @return lista esta vacía o no
+     */
     @Override
     public boolean empty() 
     {

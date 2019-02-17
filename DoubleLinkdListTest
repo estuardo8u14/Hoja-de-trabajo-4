@@ -1,0 +1,37 @@
+package hdt4;
+import static org.junit.Assert.*;
+
+public class DoubleLinkdListTest {
+
+    public void testpush() {
+        System.out.println("addFirst");
+        Object value = null;
+        DoublyLinkedList instance = new DoublyLinkedList();
+        instance.push(value);
+        // TODO revisa el código de prueba generado y elimine la llamada predeterminada para fallar
+        fail("The test case is a prototype.");
+    }
+    public void testpop() {
+        System.out.println("removeLast");
+        DoublyLinkedList instance = new DoublyLinkedList();
+        Object expResult = null;
+        Object result = instance.pop();
+        assertEquals(expResult, result);
+        fail("The test case is a prototype.");
+}
+    public void testSize() {
+        System.out.println("size");
+        DoublyLinkedList instance = new DoublyLinkedList();
+        int expResult = 0;
+        int result = instance.size();
+        assertEquals(expResult, result);
+        fail("The test case is a prototype.");
+    }
+    public void testEmpty() {
+        System.out.println("clear");
+        DoublyLinkedList instance = new DoublyLinkedList();
+        instance.Empty();
+        
+        fail("The test case is a prototype.");
+    }
+}

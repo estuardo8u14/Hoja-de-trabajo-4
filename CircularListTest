@@ -8,7 +8,7 @@ public class CircularListTest {
         Object value = null;
         CircularList instance = new CircularList();
         instance.push(value);
-        // TODO review the generated test code and remove the default call to fail.
+        // TODO revisa el código de prueba generado y elimine la llamada predeterminada para fallar.
         fail("The test case is a prototype.");
     }
     public void testpop() {
@@ -17,7 +17,7 @@ public class CircularListTest {
         Object expResult = null;
         Object result = instance.pop();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        // TODO revisa el código de prueba generado y elimine la llamada predeterminada para fallar
         fail("The test case is a prototype.");
         }
 }

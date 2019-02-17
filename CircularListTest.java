@@ -1,5 +1,9 @@
-package hdt4;
 import static org.junit.Assert.*;
+
+/**
+ * @author Estuardo
+ * @author Gerardo
+ */
 
 public class CircularListTest {
 

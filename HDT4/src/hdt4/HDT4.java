@@ -19,7 +19,7 @@ public class HDT4
     public static void main(String[] args) throws IOException 
     {   
         Scanner scan = new Scanner(System.in);
-        System.out.println("Ingrese el tipo de stack con el que desea trabajar");
+        System.out.println("Se haran operaciones ");
         String tipo = scan.next();
         tipo = tipo.toUpperCase();
         

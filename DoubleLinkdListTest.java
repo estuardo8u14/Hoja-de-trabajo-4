@@ -1,37 +1,49 @@
-package hdt4;
 import static org.junit.Assert.*;
+
+/**
+ * @author Estuardo
+ * @author Gerardo
+ */
 
 public class DoubleLinkdListTest {
 
     public void testpush() {
         System.out.println("addFirst");
-        Object value = null;
+        int value = 2;
         DoublyLinkedList instance = new DoublyLinkedList();
         instance.push(value);
-        // TODO revisa el código de prueba generado y elimine la llamada predeterminada para fallar
-        fail("The test case is a prototype.");
+        result = instance.peek();
+        assertEquals(value, result);
     }
+    
     public void testpop() {
         System.out.println("removeLast");
         DoublyLinkedList instance = new DoublyLinkedList();
-        Object expResult = null;
+        String expResult = "8";
+        instance.push(8);
         Object result = instance.pop();
+        result = result.toString();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-}
+    }
+    
     public void testSize() {
         System.out.println("size");
         DoublyLinkedList instance = new DoublyLinkedList();
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
+    
     public void testEmpty() {
         System.out.println("clear");
         DoublyLinkedList instance = new DoublyLinkedList();
-        instance.Empty();
-        
-        fail("The test case is a prototype.");
+        int expResult = 2;
+        int result = 0;
+        if(instance.empty()){
+            result = 2;
+        } else if(! instance.empty()){
+            result = 1;
+        }
+        assertEquals(expResult, result)
     }
 }

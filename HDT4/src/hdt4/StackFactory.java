@@ -26,6 +26,10 @@ public class StackFactory
         {
             return new DoubleLinkdList();
         }
+        else if(tipo.equals("CIRCULARLIST"))
+        {
+            return new CircularList();
+        }
         return null;
     }
 }

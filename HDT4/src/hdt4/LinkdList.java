@@ -1,6 +1,11 @@
 
 package hdt4;
 
+/**
+ * @author Estuardo
+ * @author Gerardo
+ * @param <E>
+ */
 public class LinkdList<E> implements iLista<E> 
 {
     

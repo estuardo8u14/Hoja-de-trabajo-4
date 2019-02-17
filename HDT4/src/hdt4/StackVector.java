@@ -3,7 +3,11 @@ package hdt4;
 
 import java.util.Vector;
 
-
+/**
+ * @author Estuardo
+ * @author Gerardo
+ * @param <E>
+ */
 public class StackVector<E> implements iStack<E> 
 {
     

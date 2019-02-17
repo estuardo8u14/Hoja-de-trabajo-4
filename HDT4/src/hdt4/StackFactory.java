@@ -2,7 +2,7 @@
 package hdt4;
 
 /**
- *
+ * @author Estuardo
  * @author Gerardo
  */
 public class StackFactory 

@@ -3,6 +3,11 @@ package hdt4;
 
 import java.util.ArrayList;
 
+/**
+ * @author Estuardo
+ * @author Gerardo
+ * @param <E>
+ */
 public class StackArrayList<E> implements iStack<E> 
 {
     

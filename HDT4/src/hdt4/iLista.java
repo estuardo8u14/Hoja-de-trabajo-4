@@ -2,6 +2,7 @@
 package hdt4;
 
 /**
+ * @author Estuardo
  * @author Gerardo
  * @param <E>
  */

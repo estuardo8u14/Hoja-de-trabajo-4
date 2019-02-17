@@ -2,7 +2,7 @@
 package hdt4;
 
 /**
- *
+ * @author Estuardo
  * @author Gerardo
  * @param <E> tipo de datos que la clase recibe como parametro 
  */

@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Estuardo
+ * @author Gerardo
+ */
 public class HDT4 
 {
     /**

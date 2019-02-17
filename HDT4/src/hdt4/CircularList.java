@@ -11,23 +11,20 @@ public class CircularList<E> extends AbstractList<E>{
     protected int count;
 
     public CircularList()
-// pre: constructs a new circular list
+    // pre: constructs a new circular list
     {
         tail = null;
         count = 0;
     }
-
-
-
+    
     @Override
-    public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int size() 
+    {
+        return count;
     }
-
-
-
-    @Override
-    public void push(E value) {
+    
+    public void addFirst(E value) 
+    {
         Node<E> temp = new Node<E>(value);
         if (tail == null) { // first value added
             tail = temp;
@@ -38,9 +35,16 @@ public class CircularList<E> extends AbstractList<E>{
         }
         count++;
     }
+    
+    public void push(E value)
+    {
+        addFirst(value);
+        tail = tail.next();
+    }
 
     @Override
-    public E pop() {
+    public E pop() 
+    {
         Node<E> finger = tail;
         while (finger.next() != tail) {
             finger = finger.next();
@@ -59,13 +63,15 @@ public class CircularList<E> extends AbstractList<E>{
     }
 
     @Override
-    public E peek() {
+    public E peek() 
+    {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean empty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean empty() 
+    {
+        return count == 0;
     }
 
 }

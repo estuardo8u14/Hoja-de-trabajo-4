@@ -1,6 +1,3 @@
-
-package hdt4;
-
 /**
  * @author Estuardo
  * @author Gerardo
@@ -8,15 +5,34 @@ package hdt4;
  */
 public interface iStack<E>
 {
-    
+    /**
+     *
+     * @param valor a ser ingresado al stack
+     */
     public void push(E item);
     
+    /**
+     *
+     * @return elimina y devuelve el ultimo elemento del stack
+     */
     public E pop();
     
+    /**
+     *
+     * @return devuelve el ultimo elemento del stack
+     */
     public E peek();
     
+    /**
+     *
+     * @return stack vacío o no
+     */
     public boolean empty();
     
+    /**
+     *
+     * @return tamaño del stack
+     */
     public int size();
     
 }

@@ -19,9 +19,69 @@ public class HDT4
     public static void main(String[] args) throws IOException 
     {   
         Scanner scan = new Scanner(System.in);
-        System.out.println("Se haran operaciones ");
-        String tipo = scan.next();
-        tipo = tipo.toUpperCase();
+        System.out.println("Se realizara el calculo de una expresion postfix");
+        System.out.println("Usted decidira que tipo de implementacion utilizar");
+        
+        int x = 0;
+        String tipo = null;
+        
+        try
+        {
+            while(x >= 4 || x <= 0)
+            {
+                System.out.println("");
+                System.out.println("PRESIONA 1 utilizar la implementacion de Vectores");
+                System.out.println("PRESIONA 2 utilizar la implementacion de ArrayLists");
+                System.out.println("PRESIONA 3 utilizar la implementacion de Listas");
+                System.out.println("");
+                x = scan.nextInt();
+            }
+        } catch(InputMismatchException e){
+            System.out.println("Ingrese solamente numeros por favor");
+            System.exit(0);
+        }
+        
+        switch(x)
+        {
+            case 1:
+                tipo = "VECTOR";
+                break;
+            case 2:
+                tipo = "ARRAYLIST";
+                break;
+            case 3:
+                int y = 0;
+                
+                System.out.println("Elija la implementacion de listas que desea");
+                try{
+                    while(y >= 4 || y <= 0)
+                    {
+                        System.out.println("");
+                        System.out.println("PRESIONA 1 utilizar la implementacion de Listas Simples");
+                        System.out.println("PRESIONA 2 utilizar la implementacion de Listas Dobles");
+                        System.out.println("PRESIONA 3 utilizar la implementacion de Listas Circulares");
+                        System.out.println("");
+                        y = scan.nextInt();
+                    }
+                } catch(InputMismatchException e){
+                    System.out.println("Ingrese solamente numeros por favor");
+                    System.out.close();
+                } 
+                
+                switch(y)
+                {
+                    case 1:
+                        tipo = "LINKEDLIST";
+                        break;
+                    case 2: 
+                        tipo = "DOUBLELINKEDLIST";
+                        break;
+                    case 3:
+                        tipo = "CIRCULARLIST";
+                        break;
+                }
+                break;
+        }
         
         iCalculadora calculadora = Calculadora.Instance();
         StackFactory stackFactory = new StackFactory();
